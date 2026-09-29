@@ -1,5 +1,5 @@
 /* ICONOCLASTE / An open mind. A live OGS profile. */
-body:has(.ico-profile) {background:#f3f2eb!important;color:#20231e!important}
+html:has(.ico-profile),body:has(.ico-profile) {background:#f3f2eb!important;color:#20231e!important}
 .User:has(.ico-profile){--ink:#20231e;--paper:#f3f2eb;--line:#d4d5ca;--lime:#d9f96e;--muted:#64695d;max-width:1320px!important;width:calc(100% - 80px)!important;margin:0 auto!important;padding:32px 0 64px!important;display:flex!important;flex-direction:column;font-family:Arial,Helvetica,sans-serif;color:var(--ink)!important}
 .User:has(.ico-profile)>.row,.User:has(.ico-profile)>.row>.col-sm-8{display:contents}
 .User:has(.ico-profile)>.row>.col-sm-8>.Card:has(.about-container){order:-2;padding:0!important;margin:0 0 56px!important;border:0!important;background:none!important;box-shadow:none!important}
@@ -27,7 +27,7 @@ body:has(.ico-profile) {background:#f3f2eb!important;color:#20231e!important}
 .ico-profile h1 em{font-weight:400;color:var(--ink);position:relative}
 .ico-intro{font-size:17px;line-height:1.8;max-width:395px;color:var(--muted)}
 .ico-actions{display:flex;align-items:center;gap:24px;margin-top:30px}
-.ico-profile .ico-button{display:inline-flex;align-items:center;gap:27px;background:var(--ink)!important;color:var(--paper)!important;border:1px solid var(--ink);padding:13px 20px;border-radius:3px;font-size:13px;font-weight:600;text-decoration:none!important;transition:background .2s,transform .2s}
+.ico-profile .ico-button{white-space:nowrap;display:inline-flex;align-items:center;gap:27px;background:var(--ink)!important;color:var(--paper)!important;border:1px solid var(--ink);padding:13px 20px;border-radius:3px;font-size:13px;font-weight:600;text-decoration:none!important;transition:background .2s,transform .2s}
 .ico-profile .ico-button:hover{background:#404738!important;transform:translateY(-2px)}
 .ico-profile .ico-button:focus-visible,.ico-profile summary:focus-visible{outline:3px solid #607a19;outline-offset:5px}
 .ico-actions>span{font:italic 15px Georgia,serif;color:var(--muted)}
