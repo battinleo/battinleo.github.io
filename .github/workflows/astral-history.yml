@@ -1,0 +1,38 @@
+name: Refresh astral rating history
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/astral-history.yml'
+      - 'scripts/update-astral-history.cjs'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: astral-rating-history
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.repository == 'battinleo/battinleo.github.io'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch public live 19x19 observations
+        run: node scripts/update-astral-history.cjs
+      - name: Commit changed observations
+        shell: bash
+        run: |
+          git add -- iconoclaste-history.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Refresh live 19x19 rating history'
+          git push
