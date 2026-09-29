@@ -1,0 +1,88 @@
+/* ICONOCLASTE / An open mind. A live OGS profile. */
+body:has(.ico-profile) {background:#f3f2eb!important;color:#20231e!important}
+.User:has(.ico-profile){--ink:#20231e;--paper:#f3f2eb;--line:#d4d5ca;--lime:#d9f96e;--muted:#64695d;max-width:1320px!important;width:calc(100% - 80px)!important;margin:0 auto!important;padding:32px 0 64px!important;display:flex!important;flex-direction:column;font-family:Arial,Helvetica,sans-serif;color:var(--ink)!important}
+.User:has(.ico-profile)>.row,.User:has(.ico-profile)>.row>.col-sm-8{display:contents}
+.User:has(.ico-profile)>.row>.col-sm-8>.Card:has(.about-container){order:-2;padding:0!important;margin:0 0 56px!important;border:0!important;background:none!important;box-shadow:none!important}
+.User:has(.ico-profile)>div:first-child{order:0}
+.User:has(.ico-profile)>.ratings-row{order:3;margin-top:28px;padding:22px 12px;background:#fafaf6;border:1px solid var(--line);border-radius:6px}
+.User:has(.ico-profile)>.row>.col-sm-8>.row{order:2;margin:24px 0 0!important;width:100%}
+.User:has(.ico-profile)>.row>.col-sm-8>.row>.col-sm-12{padding:0!important}
+.User:has(.ico-profile)>.row>.col-sm-4{order:4;width:100%;padding:0!important;margin-top:32px}
+.User:has(.ico-profile) .no-active-games{order:1;padding:14px 0;text-align:left;color:var(--muted);font-size:13px;border-bottom:1px solid var(--line)}
+.User:has(.ico-profile) .about-container{padding:0!important;margin:0!important;max-height:none!important;overflow:visible!important}
+.ico-profile,.ico-profile *{box-sizing:border-box}
+.ico-profile{color:var(--ink);font-size:16px;line-height:1.5}
+.ico-profile p,.ico-profile h1,.ico-profile h2,.ico-profile h3{margin:0}
+.ico-masthead{display:flex;align-items:center;justify-content:space-between;padding:0 0 24px;border-bottom:1px solid var(--ink);gap:20px}
+.ico-wordmark{font-size:26px;letter-spacing:-1.5px;font-weight:700;display:flex;align-items:center;gap:13px}
+.ico-mark{width:29px;height:29px;border:1px solid var(--ink);border-radius:50%;position:relative;display:inline-block}
+.ico-mark:after{content:'';position:absolute;background:var(--ink);width:12px;height:12px;border-radius:50%;top:-3px;right:-3px;box-shadow:0 0 0 4px var(--paper)}
+.ico-kicker,.ico-meta,.ico-num,.ico-art-caption,.ico-footnote{font-family:'Courier New',monospace;font-size:11px;letter-spacing:1.7px;text-transform:uppercase}
+.ico-meta{display:flex;gap:34px;color:var(--muted)}
+.ico-meta span:last-child{color:var(--ink)}
+.ico-hero{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;align-items:center;padding:76px 0 70px;min-height:580px}
+.ico-kicker{display:flex;align-items:center;gap:10px;margin-bottom:25px!important;color:var(--muted)}
+.ico-kicker:before{content:'';width:7px;height:7px;background:var(--ink);display:inline-block;border-radius:50%}
+.ico-profile h1{font-family:Georgia,'Times New Roman',serif;font-weight:400!important;font-size:clamp(62px,6.5vw,100px)!important;line-height:.98!important;letter-spacing:-5px!important;color:var(--ink)!important;border:0!important;padding:0!important;margin:0 0 28px!important;text-align:left!important}
+.ico-profile h1 em{font-weight:400;color:var(--ink);position:relative}
+.ico-intro{font-size:17px;line-height:1.8;max-width:395px;color:var(--muted)}
+.ico-actions{display:flex;align-items:center;gap:24px;margin-top:30px}
+.ico-profile .ico-button{display:inline-flex;align-items:center;gap:27px;background:var(--ink)!important;color:var(--paper)!important;border:1px solid var(--ink);padding:13px 20px;border-radius:3px;font-size:13px;font-weight:600;text-decoration:none!important;transition:background .2s,transform .2s}
+.ico-profile .ico-button:hover{background:#404738!important;transform:translateY(-2px)}
+.ico-profile .ico-button:focus-visible,.ico-profile summary:focus-visible{outline:3px solid #607a19;outline-offset:5px}
+.ico-actions>span{font:italic 15px Georgia,serif;color:var(--muted)}
+.ico-art{position:relative;width:100%;height:455px;isolation:isolate}
+.ico-orbit{position:absolute;width:370px;height:370px;border:1px solid #b6baa9;border-radius:50%;left:50%;top:45%;transform:translate(-50%,-50%)}
+.ico-orbit:after{content:'';position:absolute;inset:28px;border:1px dashed #c7cbbc;border-radius:50%}
+.ico-grid{position:absolute;width:272px;height:272px;left:50%;top:47%;transform:translate(-50%,-50%) rotate(-13deg);background-image:linear-gradient(#80877166 1px,transparent 1px),linear-gradient(90deg,#80877166 1px,transparent 1px);background-size:34px 34px;border-right:1px solid #80877166;border-bottom:1px solid #80877166;mask-image:linear-gradient(35deg,#000 45%,transparent 98%)}
+.ico-stone{position:absolute;width:51px;height:51px;border-radius:50%;display:block;box-shadow:8px 14px 14px #20231e22;background:radial-gradient(circle at 32% 25%,#555c4e,#1e241b 65%,#11170f);z-index:2}
+.ico-stone-a{left:25%;top:53%}.ico-stone-b{left:42%;top:36%;width:43px;height:43px}.ico-stone-c{left:47%;top:62%;background:radial-gradient(circle at 30% 25%,#fff,#e1e1d4 70%,#aeb3a2);border:1px solid #c1c6b5}
+.ico-stone-free{width:105px;height:105px;left:66%;top:8%;background:radial-gradient(circle at 32% 24%,#ecffa9,#d1f268 65%,#9dbd3d);box-shadow:12px 25px 24px #333c2422;animation:ico-float 7s ease-in-out infinite}
+.ico-trail{position:absolute;left:55%;top:31%;height:95px;width:120px;border-top:1px dashed #84916d;transform:rotate(-49deg)}
+.ico-coordinate{position:absolute;left:17%;top:81%;font:11px 'Courier New',monospace;color:#777f6a;letter-spacing:2px}
+.ico-orbit-label{position:absolute;left:68%;top:37%;font:10px 'Courier New',monospace;letter-spacing:2px;color:var(--muted)}
+.ico-art-caption{position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:15px 0 0;color:var(--muted);font-size:10px}
+.ico-manifesto{display:grid;grid-template-columns:1fr 2.25fr;gap:40px;border-top:1px solid var(--ink);padding:32px 0 38px}
+.ico-manifesto .ico-kicker{align-items:flex-start;margin:5px 0!important}.ico-manifesto .ico-kicker:before{display:none}
+.ico-statement{font-family:Georgia,serif;font-size:27px;line-height:1.42;letter-spacing:-.5px;max-width:800px}
+.ico-statement mark{background:var(--lime);color:var(--ink);padding:0 4px}
+.ico-principles{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ico-principle{padding:25px 30px 28px 0}.ico-principle+.ico-principle{border-left:1px solid var(--line);padding-left:30px}
+.ico-num{color:#7e856f;font-size:10px}
+.ico-profile h3{font-size:18px!important;line-height:1.3!important;font-weight:600!important;margin:12px 0 10px!important;color:var(--ink)!important}
+.ico-principle p{color:var(--muted);font-size:14px;line-height:1.7;max-width:310px}
+.ico-note{display:flex;justify-content:space-between;align-items:center;padding-top:24px;gap:25px}
+.ico-note details{max-width:710px;font-size:14px;color:var(--muted)}
+.ico-note summary{cursor:pointer;color:var(--ink);font-size:13px;text-decoration:underline;text-underline-offset:5px}
+.ico-note details p{margin:15px 0 0;font-size:14px;line-height:1.8}
+.ico-footnote{font-size:10px;color:var(--muted);white-space:nowrap}
+.User:has(.ico-profile) .profile-card{border:1px solid var(--line);border-top:3px solid var(--ink);background:#fafaf6!important;padding:30px!important;border-radius:0!important;box-shadow:none!important;margin:0!important}
+.User:has(.ico-profile) .avatar-and-ratings-row{display:flex;align-items:center;gap:35px;justify-content:space-between}
+.User:has(.ico-profile) .avatar-container{flex:0 0 31%;min-width:200px;margin:0;padding:0!important;text-align:left!important}
+.User:has(.ico-profile) .avatar-container>.Player{font-size:24px;font-weight:600;color:var(--ink)!important;display:block;margin-bottom:15px}
+.User:has(.ico-profile) .avatar-container .PlayerIcon{width:64px!important;height:64px!important;object-fit:contain;mix-blend-mode:multiply}
+.User:has(.ico-profile) .country-line{font-size:12px;color:var(--muted);margin-top:8px}
+.User:has(.ico-profile) .ratings-container{flex:1;max-width:650px;min-width:0}
+.User:has(.ico-profile) .ratings-title{font-size:13px!important;text-transform:uppercase;letter-spacing:2px;color:var(--muted)!important;margin-bottom:16px!important}
+.User:has(.ico-profile) .rating-entry.active{background:var(--lime)!important;border-color:#8f9d67!important;color:var(--ink)!important}
+.User:has(.ico-profile) .ratings-grid{font-size:13px}
+.User:has(.ico-profile) .rating-entry.unset{opacity:.48}
+.User:has(.ico-profile) .toggle-container{font-size:11px;margin-top:10px}
+.User:has(.ico-profile) h2{font:400 29px Georgia,serif!important;color:var(--ink)!important;letter-spacing:-.5px;margin:18px 0!important}
+.User:has(.ico-profile) .Card{background:#fafaf6!important;color:var(--ink)!important;border:1px solid var(--line);border-radius:3px;box-shadow:none!important;padding:20px}
+.User:has(.ico-profile) .Card a{color:#3d5731}
+.User:has(.ico-profile) table{background:transparent!important;color:var(--ink);font-size:13px;width:100%}
+.User:has(.ico-profile) th{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);padding:14px 8px!important;border-bottom:1px solid var(--line)}
+.User:has(.ico-profile) td{padding:16px 8px!important;border-bottom:1px solid #e3e5da}
+.User:has(.ico-profile) tr{background:transparent!important}.User:has(.ico-profile) tbody tr:hover{background:#edf0e2!important}
+.User:has(.ico-profile) .GameHistoryTable-options{margin-bottom:12px}
+.User:has(.ico-profile) button{border-radius:3px;box-shadow:none}
+.User:has(.ico-profile) input:not([type=checkbox]),.User:has(.ico-profile) select,.User:has(.ico-profile) textarea{background:#fff!important;color:var(--ink)!important;border:1px solid #b9c0ac!important;border-radius:3px}
+.User:has(.ico-profile) .activity-card h4{font-size:12px;color:var(--muted);margin-top:20px;letter-spacing:.5px}
+.User:has(.ico-profile) .ratings-row h4{font-size:13px;color:var(--muted)}
+.User:has(.ico-profile) .PaginatedTable>div:has(>table){overflow-x:auto}
+@keyframes ico-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@media(prefers-reduced-motion:reduce){.ico-stone-free{animation:none}.ico-profile .ico-button{transition:none}}
+@media(min-width:1500px){.ico-hero{padding-top:85px;padding-bottom:85px}}
+@media(max-width:900px){.User:has(.ico-profile){width:calc(100% - 40px)!important}.ico-hero{grid-template-columns:1.15fr 1fr;padding:55px 0 45px;min-height:480px}.ico-profile h1{font-size:70px!important;letter-spacing:-3.5px!important}.ico-art{height:375px;transform:scale(.9)}.ico-orbit{width:310px;height:310px}.ico-grid{width:238px;height:238px}.ico-stone-free{left:65%;width:85px;height:85px}.ico-meta{gap:18px;font-size:9px}.ico-manifesto{grid-template-columns:1fr 2fr;gap:20px}.ico-statement{font-size:23px}.ico-principle{padding-right:20px}.ico-principle+.ico-principle{padding-left:20px}}
+@media(max-width:650px){.User:has(.ico-profile){width:calc(100% - 32px)!important;padding-top:22px!important}.ico-masthead{padding-bottom:18px}.ico-wordmark{font-size:23px}.ico-meta span:first-child{display:none}.ico-meta{font-size:8px;letter-spacing:1px}.ico-hero{grid-template-columns:1fr;padding:43px 0 28px;gap:15px}.ico-profile h1{font-size:66px!important;letter-spacing:-3px!important}.ico-intro{font-size:15px;max-width:340px}.ico-art{height:355px;max-width:400px;margin:0 auto;transform:none}.ico-orbit{width:270px;height:270px}.ico-grid{width:204px;height:204px}.ico-stone{width:42px;height:42px}.ico-stone-free{width:80px;height:80px;left:66%;top:8%}.ico-manifesto{grid-template-columns:1fr;gap:15px;padding:24px 0}.ico-statement{font-size:24px}.ico-principles{grid-template-columns:1fr}.ico-principle,.ico-principle+.ico-principle{padding:19px 0;border-left:0}.ico-principle+.ico-principle{border-top:1px solid var(--line)}.ico-profile h3{margin:7px 0!important}.ico-principle p{max-width:none}.ico-note{align-items:flex-start;flex-direction:column;gap:18px}.User:has(.ico-profile)>.row>.col-sm-8>.Card:has(.about-container){margin-bottom:32px!important}.User:has(.ico-profile) .avatar-and-ratings-row{flex-direction:column;align-items:stretch;gap:25px}.User:has(.ico-profile) .profile-card{padding:20px!important}.User:has(.ico-profile) .avatar-container{min-width:0}.User:has(.ico-profile) .ratings-container{width:100%}.User:has(.ico-profile) .ratings-grid{font-size:11px}.User:has(.ico-profile) .Card{padding:12px}.User:has(.ico-profile) h2{font-size:25px!important}.User:has(.ico-profile) .ratings-row{padding:12px 0}.User:has(.ico-profile) table{min-width:560px}.User:has(.ico-profile) .ratings-chart{min-width:0;max-width:100%;overflow:hidden}.ico-actions{gap:17px}.ico-actions>span{font-size:13px}}
