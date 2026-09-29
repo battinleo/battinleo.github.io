@@ -23,3 +23,4 @@ html:has(.ico-astral-shell),body:has(.ico-astral-shell){overflow:hidden!importan
 body:has(.ico-astral-shell) .MainSection{min-height:0!important}
 .ico-astral-shell embed{height:calc(100dvh - 52px)!important;min-height:0!important}
 
+body:has(.ico-astral-shell) .NavBar .ogs-nav-logo{filter:invert(1) hue-rotate(180deg)}
