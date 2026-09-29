@@ -96,3 +96,9 @@ html:has(.ico-profile),body:has(.ico-profile) {background:#f3f2eb!important;colo
 .User:has(.ico-profile) .avatar-container .Player{font-size:30px;letter-spacing:-1px;font-weight:600;color:var(--ink)!important}
 .User:has(.ico-profile) h2{font:500 23px Arial,Helvetica,sans-serif!important;letter-spacing:-.5px}
 @media(max-width:650px){.User:has(.ico-profile) .ratings-grid{width:100%!important;min-width:0!important;overflow:visible!important}.User:has(.ico-profile) .ratings-grid .title-row,.User:has(.ico-profile) .ratings-grid .speed{display:grid!important;grid-template-columns:30px repeat(4,minmax(0,1fr))!important;width:100%!important;min-width:0!important}.User:has(.ico-profile) .ratings-grid .cell,.User:has(.ico-profile) .ratings-grid .title{width:auto!important;min-width:0!important}.User:has(.ico-profile) .rating-entry .rating{font-size:9px!important;white-space:nowrap}.User:has(.ico-profile) .rating .left,.User:has(.ico-profile) .rating .right{min-width:0!important;width:auto!important;margin:0 2px!important}}
+/* A quiet reveal at the center of the expanded system. */
+.ico-revelation{position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;gap:.22em;pointer-events:none;visibility:hidden;opacity:0;filter:blur(12px);transform:translateY(14px) scale(.96);font:400 clamp(32px,5vw,70px)/1.12 Georgia,'Times New Roman',serif;letter-spacing:-.055em;color:#33233f;text-shadow:0 2px 24px #eeeaf1,0 0 50px #eeeaf1;transition:opacity .35s,filter .35s,transform .45s,visibility 0s .45s}
+.ico-revelation em{font-weight:400;color:#7843a5}
+.ico-interaction[open] .ico-revelation{visibility:visible;opacity:1;filter:blur(0);transform:translateY(0) scale(1);transition:opacity 1.1s .22s,filter 1.3s .18s,transform 1.3s .18s,visibility 0s}
+.ico-interaction[open] .ico-halo{opacity:.45}
+@media(max-width:650px){.ico-revelation{font-size:clamp(27px,7.6vw,46px);letter-spacing:-.055em}}
