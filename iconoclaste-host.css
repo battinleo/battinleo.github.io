@@ -24,3 +24,11 @@ body:has(.ico-astral-shell) .MainSection{min-height:0!important}
 .ico-astral-shell embed{height:calc(100dvh - 52px)!important;min-height:0!important}
 
 body:has(.ico-astral-shell) .NavBar .ogs-nav-logo{filter:invert(1) hue-rotate(180deg)}
+
+/* Explicit dropdown colors: OGS gives its links a dark color in light mode. */
+body:has(.ico-astral-shell) .NavBar{position:relative;z-index:1100}
+body:has(.ico-astral-shell) .NavBar .Menu-children{border:1px solid #3c304d;box-shadow:0 12px 35px #0007}
+body:has(.ico-astral-shell) .NavBar .Menu-children :is(a,button,.MenuLinkTitle,label,h4,h5,i){color:#eee8f7!important}
+body:has(.ico-astral-shell) .NavBar .Menu-children :is(a,button):is(:hover,:focus-visible){background:#352443!important;color:#fff!important}
+body:has(.ico-astral-shell) .NavBar .Menu-children :is(input,select){background:#241b31!important;color:#eee8f7!important;border-color:#59456f!important}
+body:has(.ico-astral-shell) .NavBar .OpenMenuButton{color:#bcb3c9!important}
