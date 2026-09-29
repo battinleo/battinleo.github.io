@@ -33,7 +33,7 @@
     const ENDPOINTS = Object.freeze({
         profile: `${OGS_ORIGIN}/api/v1/players/${PLAYER_ID}/full`,
         games: `${OGS_ORIGIN}/api/v1/players/${PLAYER_ID}/game_history/?page_size=10&ordering=-ended&annulled=false`,
-        history: "./iconoclaste-history.json",
+        history: "./iconoclaste-history.json?series=19x19",
     });
 
     // OGS uses Glicko-2 ratings and this conversion for the displayed rank.
