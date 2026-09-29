@@ -18,3 +18,8 @@ body:has(.ico-astral-shell) .NavBar{background:#100d17!important;color:#bcb3c9!i
 body:has(.ico-astral-shell) .NavBar .Menu-title,body:has(.ico-astral-shell) .NavBar>.right,body:has(.ico-astral-shell) .NavBar .Player{color:#bcb3c9!important}
 body:has(.ico-astral-shell) .NavBar .Menu-children{background:#181320!important;color:#d3cadf!important}
 @media(max-width:650px){.ico-astral-shell embed{height:calc(100dvh - 48px)}.User:has(.ico-astral-shell) .avatar-buttons{right:12px;bottom:8px}}
+
+html:has(.ico-astral-shell),body:has(.ico-astral-shell){overflow:hidden!important}
+body:has(.ico-astral-shell) .MainSection{min-height:0!important}
+.ico-astral-shell embed{height:calc(100dvh - 52px)!important;min-height:0!important}
+
