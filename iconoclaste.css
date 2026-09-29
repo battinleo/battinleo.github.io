@@ -1,6 +1,6 @@
 /* iconoclaste / visual profile, no authored biography */
 html:has(.ico-profile),body:has(.ico-profile) {background:#f3f2eb!important;color:#20231e!important}
-.User:has(.ico-profile){--ink:#20231e;--paper:#f3f2eb;--line:#d4d5ca;--lime:#d9f96e;--muted:#64695d;max-width:1320px!important;width:calc(100% - 80px)!important;margin:0 auto!important;padding:32px 0 64px!important;display:flex!important;flex-direction:column;font-family:Arial,Helvetica,sans-serif;color:var(--ink)!important}
+.User:has(.ico-profile){--ink:#20231e;--paper:#f3f2eb;--line:#d8d1df;--accent:#c7a3f4;--muted:#68616e;max-width:1320px!important;width:calc(100% - 80px)!important;margin:0 auto!important;padding:32px 0 64px!important;display:flex!important;flex-direction:column;font-family:Arial,Helvetica,sans-serif;color:var(--ink)!important}
 .User:has(.ico-profile)>.row,.User:has(.ico-profile)>.row>.col-sm-8{display:contents}
 .User:has(.ico-profile)>.row>.col-sm-8>.Card:has(.about-container){order:-2;padding:0!important;margin:0 0 56px!important;border:0!important;background:none!important;box-shadow:none!important}
 .User:has(.ico-profile)>div:first-child{order:0}
@@ -17,30 +17,30 @@ html:has(.ico-profile),body:has(.ico-profile) {background:#f3f2eb!important;colo
 .ico-profile details{margin:0;padding:0;border:0;background:none}
 .ico-profile summary{position:relative;display:block;list-style:none;cursor:pointer;outline-offset:6px;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .ico-profile summary::-webkit-details-marker{display:none}
-.ico-profile summary:focus-visible{outline:2px solid #6c851c}
-.ico-stage{position:relative;height:340px;overflow:hidden;border:1px solid #cdd1bf;border-radius:12px;background:radial-gradient(ellipse at 65% 48%,#e6edcf66,transparent 53%),#eeeee5;isolation:isolate;perspective:850px}
-.ico-stage:before{content:'';position:absolute;inset:0;background-image:radial-gradient(#63734835 .6px,transparent .6px);background-size:13px 13px;mask-image:linear-gradient(90deg,transparent,#000,transparent);opacity:.55}
+.ico-profile summary:focus-visible{outline:2px solid #7843b1}
+.ico-stage{position:relative;height:340px;overflow:hidden;border:1px solid #d6ccdc;border-radius:12px;background:radial-gradient(ellipse at 65% 48%,#e5d5f366,transparent 53%),#eeeaf1;isolation:isolate;perspective:850px}
+.ico-stage:before{content:'';position:absolute;inset:0;background-image:radial-gradient(#76618735 .6px,transparent .6px);background-size:13px 13px;mask-image:linear-gradient(90deg,transparent,#000,transparent);opacity:.55}
 .ico-sculpture{position:absolute;inset:0;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
-.ico-halo{position:absolute;left:calc(50% - 140px);top:calc(50% - 140px);width:280px;height:280px;border:1px solid #8d9b6770;border-radius:50%;box-shadow:0 0 90px #d9f96e20;animation:ico-breathe 7s ease-in-out infinite;transition:width 1.2s,height 1.2s,top 1.2s,left 1.2s}
-.ico-halo:before,.ico-halo:after{content:'';position:absolute;border:1px solid #8d9b6740;border-radius:50%;inset:20px}
+.ico-halo{position:absolute;left:calc(50% - 140px);top:calc(50% - 140px);width:280px;height:280px;border:1px solid #9b78b870;border-radius:50%;box-shadow:0 0 90px #c7a3f420;animation:ico-breathe 7s ease-in-out infinite;transition:width 1.2s,height 1.2s,top 1.2s,left 1.2s}
+.ico-halo:before,.ico-halo:after{content:'';position:absolute;border:1px solid #9b78b840;border-radius:50%;inset:20px}
 .ico-halo:after{inset:-24px;border-style:dashed;animation:ico-turn 55s linear infinite}
-.ico-plane{position:absolute;width:420px;height:238px;left:calc(50% - 210px);top:calc(50% - 119px);transform:rotate(-14deg) skewY(6deg);transition:transform 1.3s cubic-bezier(.2,.7,.2,1),opacity 1s;opacity:.6;background-image:linear-gradient(#70815355 1px,transparent 1px),linear-gradient(90deg,#70815355 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse,#000 25%,transparent 74%)}
-.ico-orbit-path{position:absolute;left:calc(50% - 330px);top:calc(50% - 85px);width:660px;height:170px;border:1px solid #97a27b60;border-radius:50%;transform:rotate(-18deg);transition:transform 1.4s,width 1.4s,left 1.4s}
-.ico-orbit-path:after{content:'';position:absolute;inset:22px -24px;border:1px solid #97a27b35;border-radius:50%;transform:rotate(30deg)}
+.ico-plane{position:absolute;width:420px;height:238px;left:calc(50% - 210px);top:calc(50% - 119px);transform:rotate(-14deg) skewY(6deg);transition:transform 1.3s cubic-bezier(.2,.7,.2,1),opacity 1s;opacity:.6;background-image:linear-gradient(#86659e55 1px,transparent 1px),linear-gradient(90deg,#86659e55 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse,#000 25%,transparent 74%)}
+.ico-orbit-path{position:absolute;left:calc(50% - 330px);top:calc(50% - 85px);width:660px;height:170px;border:1px solid #a18ab560;border-radius:50%;transform:rotate(-18deg);transition:transform 1.4s,width 1.4s,left 1.4s}
+.ico-orbit-path:after{content:'';position:absolute;inset:22px -24px;border:1px solid #a18ab535;border-radius:50%;transform:rotate(30deg)}
 .ico-orbiter{position:absolute;left:calc(50% - 138px);top:calc(50% - 138px);width:276px;height:276px;animation:ico-turn 26s linear infinite;pointer-events:none}
-.ico-orbiter:before{content:'';position:absolute;top:12px;left:67px;width:7px;height:7px;border-radius:50%;background:#718440;box-shadow:0 0 18px #a3b966}
+.ico-orbiter:before{content:'';position:absolute;top:12px;left:67px;width:7px;height:7px;border-radius:50%;background:#8752b2;box-shadow:0 0 18px #bc92da}
 .ico-stone{position:absolute;left:calc(50% + var(--x));top:calc(50% + var(--y));width:var(--s);height:var(--s);transition:left 1.2s cubic-bezier(.18,.75,.25,1),top 1.2s cubic-bezier(.18,.75,.25,1),filter .4s;z-index:2}
-.ico-stone i{display:block;width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 30% 22%,#626b56,#242d1f 61%,#10190c);box-shadow:12px 18px 19px #202c272b,inset -3px -4px 7px #0003;animation:ico-drift var(--t,7s) ease-in-out infinite;animation-delay:var(--delay,0s)}
+.ico-stone i{display:block;width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 30% 22%,#62596b,#29232f 61%,#17121d);box-shadow:12px 18px 19px #28232e2b,inset -3px -4px 7px #0003;animation:ico-drift var(--t,7s) ease-in-out infinite;animation-delay:var(--delay,0s)}
 .ico-s1{--x:-175px;--y:20px;--s:65px;--t:6s}
 .ico-s2{--x:-58px;--y:-55px;--s:46px;--t:8s;--delay:-3s}
 .ico-s3{--x:50px;--y:58px;--s:55px;--t:7s;--delay:-2s}
-.ico-s3 i{background:radial-gradient(circle at 30% 22%,#fff,#e5e7d9 61%,#b8c2a6)}
+.ico-s3 i{background:radial-gradient(circle at 30% 22%,#fff,#e8e3ec 61%,#c0b4c9)}
 .ico-s4{--x:130px;--y:-125px;--s:100px;--t:9s;--delay:-4s}
-.ico-s4 i{background:radial-gradient(circle at 30% 22%,#f0ffc1,#d5f66c 62%,#9ebc3c);box-shadow:17px 27px 29px #283a2924,inset -3px -4px 9px #9aae3b40}
-.ico-s5{--x:-295px;--y:-90px;--s:17px;--t:11s;--delay:-1s}.ico-s5 i{background:#d9e7af}
-.ico-toggle{position:absolute;right:22px;bottom:22px;width:36px;height:36px;border:1px solid #8f9a785e;border-radius:50%;background:#f8f9f088;transition:transform .7s,background .4s;z-index:3}
-.ico-toggle:before,.ico-toggle:after{content:'';position:absolute;background:#566346;left:10px;top:17px;width:14px;height:1px}.ico-toggle:after{transform:rotate(90deg)}
-.ico-interaction[open] .ico-toggle{transform:rotate(45deg);background:#d9f96e}
+.ico-s4 i{background:radial-gradient(circle at 30% 22%,#eedcff,#b980ef 62%,#7543af);box-shadow:17px 27px 29px #30223924,inset -3px -4px 9px #8750ba40}
+.ico-s5{--x:-295px;--y:-90px;--s:17px;--t:11s;--delay:-1s}.ico-s5 i{background:#d6b9ee}
+.ico-toggle{position:absolute;right:22px;bottom:22px;width:36px;height:36px;border:1px solid #a08bb15e;border-radius:50%;background:#faf7fd88;transition:transform .7s,background .4s;z-index:3}
+.ico-toggle:before,.ico-toggle:after{content:'';position:absolute;background:#6d507f;left:10px;top:17px;width:14px;height:1px}.ico-toggle:after{transform:rotate(90deg)}
+.ico-interaction[open] .ico-toggle{transform:rotate(45deg);background:#c7a3f4}
 .ico-interaction[open] .ico-plane{transform:rotate(23deg) skewY(-9deg) scale(1.2);opacity:.28}
 .ico-interaction[open] .ico-halo{width:390px;height:390px;left:calc(50% - 195px);top:calc(50% - 195px)}
 .ico-interaction[open] .ico-orbit-path{width:820px;left:calc(50% - 410px);transform:rotate(8deg)}
@@ -50,7 +50,7 @@ html:has(.ico-profile),body:has(.ico-profile) {background:#f3f2eb!important;colo
 .ico-interaction[open] .ico-s4{left:calc(50% + 265px);top:calc(50% - 80px)}
 .ico-interaction[open] .ico-s5{left:calc(50% - 345px);top:calc(50% - 30px)}
 .ico-zone{position:absolute;z-index:4;width:33.334%;height:100%;top:0}.ico-z1{left:0}.ico-z2{left:33.333%}.ico-z3{left:66.666%}
-@media(hover:hover){.ico-stage:has(.ico-z1:hover) .ico-sculpture{transform:rotateY(-8deg) rotateX(4deg) translateX(-12px)}.ico-stage:has(.ico-z3:hover) .ico-sculpture{transform:rotateY(8deg) rotateX(-4deg) translateX(12px)}.ico-stage:hover .ico-toggle{background:#d9f96e}.ico-stage:hover .ico-stone{filter:drop-shadow(0 6px 8px #6d805416)}}
+@media(hover:hover){.ico-stage:has(.ico-z1:hover) .ico-sculpture{transform:rotateY(-8deg) rotateX(4deg) translateX(-12px)}.ico-stage:has(.ico-z3:hover) .ico-sculpture{transform:rotateY(8deg) rotateX(-4deg) translateX(12px)}.ico-stage:hover .ico-toggle{background:#c7a3f4}.ico-stage:hover .ico-stone{filter:drop-shadow(0 6px 8px #84629816)}}
 @keyframes ico-drift{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(4px,-17px,0)}}
 @keyframes ico-turn{to{transform:rotate(360deg)}}
 @keyframes ico-breathe{0%,100%{opacity:.5;transform:scale(.97)}50%{opacity:1;transform:scale(1.025)}}
@@ -62,32 +62,32 @@ html:has(.ico-profile),body:has(.ico-profile) {background:#f3f2eb!important;colo
 .User:has(.ico-profile) .country-line{font-size:12px;color:var(--muted);margin-top:8px}
 .User:has(.ico-profile) .ratings-container{flex:1;max-width:650px;min-width:0}
 .User:has(.ico-profile) .ratings-title{font-size:13px!important;text-transform:uppercase;letter-spacing:2px;color:var(--muted)!important;margin-bottom:16px!important}
-.User:has(.ico-profile) .rating-entry.active{background:var(--lime)!important;border-color:#8f9d67!important;color:var(--ink)!important}
+.User:has(.ico-profile) .rating-entry.active{background:var(--accent)!important;border-color:#a27dbb!important;color:var(--ink)!important}
 .User:has(.ico-profile) .ratings-grid{font-size:13px}
 .User:has(.ico-profile) .rating-entry.unset{opacity:.48}
 .User:has(.ico-profile) .toggle-container{font-size:11px;margin-top:10px}
 .User:has(.ico-profile) h2{font:400 29px Georgia,serif!important;color:var(--ink)!important;letter-spacing:-.5px;margin:18px 0!important}
 .User:has(.ico-profile) .Card{background:#fafaf6!important;color:var(--ink)!important;border:1px solid var(--line);border-radius:3px;box-shadow:none!important;padding:20px}
-.User:has(.ico-profile) .Card a{color:#3d5731}
+.User:has(.ico-profile) .Card a{color:#704093}
 .User:has(.ico-profile) table{background:transparent!important;color:var(--ink);font-size:13px;width:100%}
 .User:has(.ico-profile) th{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);padding:14px 8px!important;border-bottom:1px solid var(--line)}
-.User:has(.ico-profile) td{padding:16px 8px!important;border-bottom:1px solid #e3e5da}
-.User:has(.ico-profile) tr{background:transparent!important}.User:has(.ico-profile) tbody tr:hover{background:#edf0e2!important}
+.User:has(.ico-profile) td{padding:16px 8px!important;border-bottom:1px solid #e7e0ec}
+.User:has(.ico-profile) tr{background:transparent!important}.User:has(.ico-profile) tbody tr:hover{background:#f0e8f7!important}
 .User:has(.ico-profile) .GameHistoryTable-options{margin-bottom:12px}
 .User:has(.ico-profile) button{border-radius:3px;box-shadow:none}
-.User:has(.ico-profile) input:not([type=checkbox]),.User:has(.ico-profile) select,.User:has(.ico-profile) textarea{background:#fff!important;color:var(--ink)!important;border:1px solid #b9c0ac!important;border-radius:3px}
+.User:has(.ico-profile) input:not([type=checkbox]),.User:has(.ico-profile) select,.User:has(.ico-profile) textarea{background:#fff!important;color:var(--ink)!important;border:1px solid #c5b6cf!important;border-radius:3px}
 .User:has(.ico-profile) .activity-card h4{font-size:12px;color:var(--muted);margin-top:20px;letter-spacing:.5px}
 .User:has(.ico-profile) .ratings-row h4{font-size:13px;color:var(--muted)}
 .User:has(.ico-profile) .PaginatedTable>div:has(>table){overflow-x:auto}
 
 .User:has(.ico-profile)>.row>.col-sm-8>.Card:has(.about-container){margin-bottom:24px!important}
-.User:has(.ico-profile) .profile-card{border-top:1px solid var(--line);border-radius:12px!important;background:#f7f8f1!important}
+.User:has(.ico-profile) .profile-card{border-top:1px solid var(--line);border-radius:12px!important;background:#faf7fc!important}
 .User:has(.ico-profile) .avatar-container>.Player{font-size:32px;letter-spacing:-1.1px}
 .User:has(.ico-profile) .Card{border-radius:10px;transition:border-color .3s,box-shadow .3s}
-.User:has(.ico-profile) .Card:focus-within{border-color:#85945e}
+.User:has(.ico-profile) .Card:focus-within{border-color:#9a75b3}
 .User:has(.ico-profile) tbody tr{transition:background .2s,box-shadow .2s}
-.User:has(.ico-profile) tbody tr:hover{background:#e9efd8!important;box-shadow:inset 3px 0 #879f47}
-.User:has(.ico-profile) .rating-entry{transition:background .2s,transform .2s}.User:has(.ico-profile) .rating-entry:hover{transform:translateY(-2px);background:#e8eddb}
+.User:has(.ico-profile) tbody tr:hover{background:#eee4f7!important;box-shadow:inset 3px 0 #a16ace}
+.User:has(.ico-profile) .rating-entry{transition:background .2s,transform .2s}.User:has(.ico-profile) .rating-entry:hover{transform:translateY(-2px);background:#efe5f6}
 .User:has(.ico-profile) button{transition:background .2s,transform .2s}.User:has(.ico-profile) button:active{transform:scale(.97)}
 @media(max-width:900px){.User:has(.ico-profile){width:calc(100% - 36px)!important}.ico-stage{height:300px}.ico-sculpture{zoom:.85}}
 @media(max-width:650px){.User:has(.ico-profile){width:calc(100% - 24px)!important;padding-top:14px!important}.ico-stage{height:235px}.ico-sculpture{zoom:.6}.ico-toggle{right:14px;bottom:14px}.User:has(.ico-profile) .avatar-and-ratings-row{flex-direction:column;align-items:stretch;gap:24px}.User:has(.ico-profile) .profile-card{padding:22px!important}.User:has(.ico-profile) .avatar-container{min-width:0}.User:has(.ico-profile) .ratings-container{width:100%}.User:has(.ico-profile) .ratings-grid{font-size:11px}.User:has(.ico-profile) .Card{padding:12px}.User:has(.ico-profile) h2{font-size:25px!important}.User:has(.ico-profile) table{min-width:560px}.User:has(.ico-profile) .ratings-chart{min-width:0;max-width:100%;overflow:hidden}.User:has(.ico-profile)>.ratings-row{padding:12px 0}}
