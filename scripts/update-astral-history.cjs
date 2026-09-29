@@ -1,12 +1,12 @@
-/* Refresh public OGS live 19x19 rating history. No dependencies or credentials. */
+/* Refresh public OGS global 19x19 rating history. No dependencies or credentials. */
 'use strict';
 
 const fs = require('node:fs/promises');
 const path = require('node:path');
 
-const ENDPOINT = 'https://online-go.com/termination-api/player/2117847/v5-rating-history?speed=live&size=19';
+const ENDPOINT = 'https://online-go.com/termination-api/player/2117847/v5-rating-history?speed=overall&size=19';
 const OUTPUT = path.resolve('iconoclaste-history.json');
-const SERIES = 'live-19x19';
+const SERIES = '19x19';
 
 // OGS RatingsChart uses this TSV endpoint. Its RatingEntry parser reads
 // `ended` as Unix seconds and `rating` as the numeric Glicko rating.
