@@ -23,11 +23,13 @@ jobs:
     timeout-minutes: 5
     permissions:
       contents: write
+      pages: write
     steps:
       - uses: actions/checkout@v4
       - name: Fetch public live 19x19 observations
         run: node scripts/update-astral-history.cjs
       - name: Commit changed observations
+        id: update
         shell: bash
         run: |
           git add -- iconoclaste-history.json
@@ -37,6 +39,14 @@ jobs:
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Refresh live 19x19 rating history'
           for attempt in 1 2 3; do
             git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' pull --rebase origin main
-            if git push; then exit 0; fi
+            if git push; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
           done
           exit 1
+      - name: Rebuild the public Pages site
+        if: steps.update.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST repos/${{ github.repository }}/pages/builds
