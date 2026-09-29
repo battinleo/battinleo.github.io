@@ -35,4 +35,8 @@ jobs:
             exit 0
           fi
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Refresh live 19x19 rating history'
-          git push
+          for attempt in 1 2 3; do
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' pull --rebase origin main
+            if git push; then exit 0; fi
+          done
+          exit 1
