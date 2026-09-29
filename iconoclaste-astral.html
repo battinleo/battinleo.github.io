@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>iconoclaste</title><style>
+:root{color-scheme:dark;--bg:#0b0911;--surface:#12101b;--ink:#eee8f7;--muted:#8d879a;--accent:#b58ae9;--line:#342b44;--halo:#7951bb;--shadow:#040207;--panel:rgba(17,13,26,.82)}
+:root.light{color-scheme:light;--bg:#f2eff7;--surface:#e9e3f1;--ink:#302439;--muted:#77707f;--accent:#8750b9;--line:#d2c5e0;--halo:#ab85d4;--shadow:#a99ab7;--panel:rgba(242,239,247,.88)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--line) var(--bg)}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Arial,Helvetica,sans-serif;transition:background .7s,color .7s;overflow-x:hidden}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit}button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:7px}button{cursor:pointer}a{color:inherit}::selection{background:#a67be966;color:var(--ink)}
+.sky{position:fixed;inset:-15%;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 75% 27%,#63318f20,transparent 35%),radial-gradient(ellipse at 19% 68%,#42409b15,transparent 38%);will-change:transform}.stars{position:absolute;inset:0}.star{position:absolute;width:2px;height:2px;background:var(--accent);border-radius:50%;opacity:.24}.star:nth-child(7n){width:3px;height:3px;box-shadow:0 0 12px var(--accent);animation:twinkle 7s ease-in-out infinite alternate}.stars.near{opacity:.45}.light .sky{opacity:.55}
+.shell{max-width:1120px;margin:auto;padding:42px 56px 90px}.masthead{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:5}.identity{display:flex;align-items:center;gap:19px}.handle{margin:0;font-size:25px;letter-spacing:-1px;font-weight:500}.borderless{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:9px;margin-top:5px}.flag{width:17px;height:11px;background:#fff;clip-path:polygon(0 0,100% 9%,90% 96%,0 88%);display:inline-block;position:relative;filter:drop-shadow(0 0 2px #fff4)}.light .flag{box-shadow:inset 0 0 0 1px #ccc}.theme{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:transparent;display:grid;place-items:center;transition:background .3s,transform .4s}.theme:hover{background:var(--surface);transform:rotate(16deg)}.theme svg{width:18px;height:18px;stroke:var(--muted);fill:none;stroke-width:1.5}.theme .moon,.light .theme .sun{display:none}.light .theme .moon{display:block}
+.mascot{width:58px;height:58px;display:grid;place-items:center;position:relative;flex-shrink:0}.mascot:before{content:'';position:absolute;inset:0;border:1px solid var(--line);border-radius:50%;box-shadow:0 0 30px #8653c414}.eye{width:43px;height:28px;background:linear-gradient(160deg,#fff,#cfc4e8);border-radius:80% 20% 80% 20%;transform:rotate(45deg);box-shadow:0 0 16px #b090df30;overflow:hidden;position:relative;animation:blink 8.7s infinite;isolation:isolate}.iris{position:absolute;left:10px;top:4px;width:22px;height:22px;border-radius:50%;background:repeating-conic-gradient(#a57ada 0deg 8deg,#634580 8deg 17deg);border:2px solid #5b3b7b;box-shadow:0 0 3px #301448;transform:rotate(-45deg) translate(var(--ex,0px),var(--ey,0px));will-change:transform}.iris:before{content:'';position:absolute;inset:5px;background:#160f21;border-radius:50%}.iris:after{content:'';position:absolute;top:2px;left:4px;width:5px;height:5px;background:white;border-radius:50%}.lid{transform:rotate(-45deg)}
+.orbit-section{position:relative;margin-top:40px;height:620px;display:grid;place-items:center}.system{border:0;background:none;width:100%;height:520px;position:relative;padding:0;perspective:1000px;outline-offset:-10px}.depth{position:absolute;inset:0;will-change:transform}.sculpture{position:absolute;inset:0;transition:transform 1.5s cubic-bezier(.16,1,.3,1)}.nebula{position:absolute;left:calc(50% - 250px);top:calc(50% - 250px);width:500px;height:500px;border-radius:50%;background:radial-gradient(#7f45b921,transparent 67%);filter:blur(12px);animation:breathe 9s ease-in-out infinite alternate}.ring{position:absolute;left:calc(50% - 170px);top:calc(50% - 170px);width:340px;height:340px;border:1px solid #a58ac230;border-radius:50%;transition:transform 1.4s,opacity 1.4s}.ring:before,.ring:after{content:'';position:absolute;inset:24px;border:1px solid #a58ac21c;border-radius:50%}.ring:after{inset:-25px;border-style:dashed;animation:turn 100s linear infinite}.orbit{position:absolute;width:800px;height:240px;left:calc(50% - 400px);top:calc(50% - 120px);border:1px solid #a58ac22c;border-radius:50%;transform:rotate(-23deg);transition:transform 1.8s,width 1.8s,left 1.8s}.orbit.two{width:700px;height:180px;left:calc(50% - 350px);top:calc(50% - 90px);transform:rotate(31deg);border-color:#a58ac218}.orbit:after{content:'';width:4px;height:4px;background:var(--accent);position:absolute;left:11%;top:18%;border-radius:50%;box-shadow:0 0 12px #bd95ff}.grid{position:absolute;left:calc(50% - 210px);top:calc(50% - 140px);width:420px;height:280px;background-image:linear-gradient(#bda0db15 1px,transparent 1px),linear-gradient(90deg,#bda0db15 1px,transparent 1px);background-size:34px 34px;transform:rotate(-15deg) skewY(8deg);mask-image:radial-gradient(ellipse,#000,transparent 70%);transition:transform 1.5s}
+.planet{position:absolute;left:calc(50% + var(--x));top:calc(50% + var(--y));width:var(--size);height:var(--size);transition:left 1.5s cubic-bezier(.16,1,.3,1),top 1.5s cubic-bezier(.16,1,.3,1);z-index:2}.planet i{display:block;width:100%;height:100%;border-radius:50%;animation:drift var(--duration,8s) ease-in-out infinite;animation-delay:var(--delay,0s);background:radial-gradient(circle at 28% 20%,#655d72,#24202d 55%,#100c16 83%);box-shadow:inset -8px -12px 18px #05020a80,10px 20px 35px #0004}.planet.one{--x:-180px;--y:32px;--size:84px;--duration:7s}.planet.two{--x:-66px;--y:-90px;--size:54px;--delay:-3s}.planet.three{--x:50px;--y:89px;--size:58px;--delay:-6s}.planet.three i{background:radial-gradient(circle at 28% 20%,#fff,#d7c9e7 57%,#8d7ba1);box-shadow:inset -4px -6px 8px #5f437822,0 0 30px #c6adf218}.planet.four{--x:115px;--y:-163px;--size:143px;--duration:11s;--delay:-3s}.planet.four i{background:radial-gradient(circle at 28% 20%,#dfc2ff,#9a5cd6 48%,#4c2775 86%);box-shadow:inset -6px -10px 18px #180c4255,0 0 65px #7a38bf29,15px 25px 35px #0003}.planet.five{--x:-305px;--y:-111px;--size:19px;--delay:-2s}.planet.five i{background:#ab8ccb}.satellite{position:absolute;left:calc(50% - 183px);top:calc(50% - 183px);width:366px;height:366px;animation:turn 35s linear infinite}.satellite:before{content:'';position:absolute;left:12%;top:12%;width:6px;height:6px;background:#a579d7;border-radius:50%;box-shadow:0 0 15px #c493f0}
+.revelation{position:absolute;inset:0;display:flex;justify-content:center;align-items:center;gap:.19em;font:400 clamp(30px,5.7vw,72px)/1.1 Georgia,serif;letter-spacing:-.055em;color:var(--ink);z-index:3;opacity:0;filter:blur(14px);transform:translateY(18px) scale(.97);transition:opacity .4s,filter .5s,transform .6s;pointer-events:none;text-shadow:0 3px 30px var(--bg)}.revelation em{color:var(--accent);font-weight:400}.system[aria-expanded=true] .revelation{opacity:1;filter:blur(0);transform:none;transition:opacity 1.2s .2s,filter 1.4s .15s,transform 1.4s .15s}.system[aria-expanded=true] .planet.one{left:calc(50% - 290px);top:calc(50% + 75px)}.system[aria-expanded=true] .planet.two{left:calc(50% - 110px);top:calc(50% - 186px)}.system[aria-expanded=true] .planet.three{left:calc(50% + 140px);top:calc(50% + 112px)}.system[aria-expanded=true] .planet.four{left:calc(50% + 260px);top:calc(50% - 150px)}.system[aria-expanded=true] .planet.five{left:calc(50% - 370px);top:calc(50% - 45px)}.system[aria-expanded=true] .ring{transform:scale(1.45);opacity:.55}.system[aria-expanded=true] .orbit{transform:rotate(5deg) scale(1.14)}.system[aria-expanded=true] .orbit.two{transform:rotate(-37deg)}.system[aria-expanded=true] .grid{transform:rotate(25deg) scale(1.3);opacity:.5}
+.expand-icon{position:absolute;bottom:13px;left:calc(50% - 18px);width:36px;height:36px;border:1px solid var(--line);border-radius:50%;color:var(--muted);transition:transform .6s,background .3s}.expand-icon:before,.expand-icon:after{content:'';height:1px;width:12px;position:absolute;left:11px;top:17px;background:currentColor}.expand-icon:after{transform:rotate(90deg)}.system:hover .expand-icon{background:var(--surface);color:var(--accent)}.system[aria-expanded=true] .expand-icon{transform:rotate(45deg)}
+.content{position:relative;z-index:4}.rank-section{border-top:1px solid var(--line);padding:45px 0 28px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px}.eyebrow{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:0 0 16px;font-weight:500}.rank-values{display:flex;align-items:baseline;gap:23px;font-variant-numeric:tabular-nums}.dan{font:400 64px/1 Georgia,serif;letter-spacing:-3px;white-space:nowrap}.elo{color:var(--accent);font-size:21px;font-weight:400;white-space:nowrap}.elo small{font-size:11px;margin-left:6px;letter-spacing:1px}.sparkline{width:100%;height:160px;overflow:visible;display:block}.sparkline path{stroke:var(--accent);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 7px #a472db60);vector-effect:non-scaling-stroke}.history-error{font-size:12px;color:var(--muted)}.games-section{padding:68px 0 130px;border-bottom:1px solid var(--line);margin-top:58px;position:relative}.games-section:before{content:'';position:absolute;right:40px;top:-45px;width:120px;height:120px;border:1px solid var(--line);border-radius:50%;opacity:.22;pointer-events:none}.games{font:400 clamp(21px,2.5vw,31px)/1.9 Georgia,serif;letter-spacing:-.5px;max-width:900px}.games a{color:var(--muted);text-decoration:none;transition:color .25s,text-shadow .25s}.games a.win{font-weight:700;color:var(--accent)}.games a:hover{color:var(--ink);text-shadow:0 0 20px #b586ef55;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}.comma{color:var(--muted)}.error{font:13px Arial,sans-serif;color:var(--muted)}.retry{border:0;background:transparent;color:var(--accent);text-decoration:underline;margin-left:8px}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.end-star{display:block;margin:60px auto 0;color:var(--accent);width:14px;height:14px;opacity:.6}
+@keyframes drift{50%{transform:translate(5px,-18px)}}@keyframes turn{to{transform:rotate(360deg)}}@keyframes breathe{to{transform:scale(1.1);opacity:.5}}@keyframes twinkle{to{opacity:.7}}@keyframes blink{0%,42%,45%,94%,98%,100%{clip-path:ellipse(80% 80%)}43%,96%{clip-path:ellipse(80% 2%)}97%{clip-path:ellipse(80% 25%)}}
+@media(min-width:1600px){.shell{max-width:1240px}.orbit-section{height:690px}}
+@media(max-width:700px){.shell{padding:28px 24px 55px}.handle{font-size:22px}.identity{gap:12px}.mascot{width:46px;height:46px}.mascot .lid{scale:.84}.borderless{font-size:10px}.theme{width:36px;height:36px}.orbit-section{height:480px;margin-top:10px;overflow:visible}.system{height:470px}.sculpture{transform:scale(.65)}.revelation{font-size:clamp(28px,7.7vw,51px);letter-spacing:-.055em;white-space:nowrap}.rank-section{grid-template-columns:1fr;padding:38px 0 10px;gap:15px}.rank-values{gap:20px}.dan{font-size:54px}.elo{font-size:19px}.sparkline{height:125px}.games-section{margin-top:25px;padding:35px 0 75px}.games{font-size:25px;line-height:1.8}.system .expand-icon{bottom:16px}.games-section:before{right:10px;width:85px;height:85px}}
+@media(max-width:390px){.shell{padding-inline:18px}.handle{font-size:20px}.borderless{font-size:9px}.sculpture{transform:scale(.51)}.orbit-section{height:420px}.system{height:410px}.revelation{font-size:28px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.depth,.sky,.content{transform:none!important}}
+</style></head><body>
+<div class="sky" aria-hidden="true"><div class="stars far"></div><div class="stars near"></div></div>
+<main class="shell">
+<header class="masthead"><div class="identity"><div class="mascot" aria-hidden="true"><div class="lid"><div class="eye"><div class="iris"></div></div></div></div><div><h1 class="handle">iconoclaste</h1><div class="borderless"><span class="flag" aria-hidden="true"></span><span>I don't believe in borders.</span></div></div></div><button class="theme" type="button" aria-label="Switch to light theme" aria-pressed="false"><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4.2 4.2l2.1 2.1m11.4 11.4 2.1 2.1M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.5A9 9 0 0 1 8.5 4a9 9 0 1 0 11.5 11.5Z"/></svg></button></header>
+<section class="orbit-section" aria-label="Interactive planet system"><button class="system" type="button" aria-expanded="false" aria-label="Expand the planet system"><span class="depth" aria-hidden="true"><span class="sculpture"><span class="nebula"></span><span class="ring"></span><span class="orbit"></span><span class="orbit two"></span><span class="grid"></span><span class="satellite"></span><span class="planet one"><i></i></span><span class="planet two"><i></i></span><span class="planet three"><i></i></span><span class="planet four"><i></i></span><span class="planet five"><i></i></span></span></span><span class="revelation" aria-hidden="true"><span>Beyond</span> <em>perception.</em></span><span class="expand-icon" aria-hidden="true"></span></button></section>
+<div class="content"><section class="rank-section" aria-label="Rapid 19 by 19 rating"><div><h2 class="eyebrow">19 × 19 · Rapid</h2><div class="rank-values"><span class="dan" id="dan">—</span><span class="elo"><span id="elo">—</span><small>ELO</small></span></div><span class="error" id="rank-error"></span></div><div class="chart-wrap"><svg class="sparkline" viewBox="0 0 600 160" preserveAspectRatio="none" role="img" aria-label="Rapid 19 by 19 rating history"><title>Rapid 19 by 19 rating history</title><path id="rating-line" d=""/></svg><span class="history-error" id="history-error"></span></div></section>
+<section class="games-section" aria-labelledby="games-heading"><h2 class="eyebrow" id="games-heading">Last games</h2><div class="games" id="games" aria-live="polite"><span class="error">Loading…</span></div></section><svg class="end-star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 0 12 8 20 10 12 12 10 20 8 12 0 10 8 8Z" fill="currentColor"/></svg></div>
+</main>
+<script>
+(function (root) {
+    "use strict";
+
+    const PLAYER_ID = 2117847;
+    const OGS_ORIGIN = "https://online-go.com";
+    const ENDPOINTS = Object.freeze({
+        profile: `${OGS_ORIGIN}/api/v1/players/${PLAYER_ID}/full`,
+        games: `${OGS_ORIGIN}/api/v1/players/${PLAYER_ID}/game_history/?page_size=10&ordering=-ended`,
+        history: "https://raw.githubusercontent.com/battinleo/battinleo.github.io/main/iconoclaste-history.json",
+    });
+
+    // OGS uses Glicko-2 ratings and this conversion for the displayed rank.
+    // Source: online-go/online-go.com, src/lib/rank_utils.ts.
+    function rankLabel(rating) {
+        if (!Number.isFinite(rating)) throw new Error("The rapid 19×19 rating is unavailable.");
+        const rank = Math.min(38, Math.max(5, Math.log(Math.min(6000, Math.max(100, rating)) / 525) * 23.15));
+        return rank >= 30
+            ? `${(Math.floor((rank - 29) * 10) / 10).toFixed(1)} dan`
+            : `${(Math.ceil((30 - rank) * 10) / 10).toFixed(1)} kyu`;
+    }
+
+    function parseProfile(payload) {
+        const user = payload && payload.user;
+        if (!user || Number(user.id) !== PLAYER_ID || typeof user.username !== "string") {
+            throw new Error("OGS returned an unexpected player profile.");
+        }
+        // Do not silently substitute the overall or another board-size rating.
+        const rating = user.ratings && user.ratings["live-19x19"];
+        if (!rating || typeof rating.rating !== "number" || !Number.isFinite(rating.rating)) {
+            throw new Error("The rapid 19×19 rating is unavailable.");
+        }
+        return { username: user.username, dan: rankLabel(rating.rating), elo: Math.round(rating.rating) };
+    }
+
+    function playerColor(game) {
+        if (game.rengo) {
+            if (Array.isArray(game.rengo_black_team) && game.rengo_black_team.includes(PLAYER_ID)) return "black";
+            if (Array.isArray(game.rengo_white_team) && game.rengo_white_team.includes(PLAYER_ID)) return "white";
+        }
+        if (Number(game.players && game.players.black && game.players.black.id) === PLAYER_ID) return "black";
+        if (Number(game.players && game.players.white && game.players.white.id) === PLAYER_ID) return "white";
+        throw new Error("OGS returned a game without this player.");
+    }
+
+    // Match GameHistoryTable.tsx's result rules, including annulments and draws.
+    function parseGames(payload) {
+        if (!payload || !Array.isArray(payload.results)) throw new Error("The recent games are unavailable.");
+        return payload.results.filter(game => game && game.ended).map(game => {
+            const color = playerColor(game);
+            const opponentColor = color === "black" ? "white" : "black";
+            const historical = game.historical_ratings && game.historical_ratings[opponentColor];
+            const opponent = historical && typeof historical.username === "string"
+                ? historical : game.players && game.players[opponentColor];
+            const id = Number(game.id);
+            const ended = new Date(game.ended);
+            if (!opponent || typeof opponent.username !== "string" || !Number.isSafeInteger(id) || id <= 0 || !Number.isFinite(ended.getTime())) {
+                throw new Error("OGS returned an incomplete recent game.");
+            }
+            const ownLoss = game[`${color}_lost`];
+            const opponentLoss = game[`${opponentColor}_lost`];
+            return {
+                name: opponent.username,
+                url: `${OGS_ORIGIN}/game/${id}`,
+                win: !game.annulled && ownLoss === false && opponentLoss === true,
+                annulled: Boolean(game.annulled),
+                date: ended.toISOString(),
+            };
+        }).sort((a, b) => b.date.localeCompare(a.date)).slice(0, 10);
+    }
+
+    // The official history endpoint is a TSV with Unix-second timestamps.
+    // Only numeric ended/rating columns are read, so quoted JSON in extra does not matter.
+    function parseHistory(tsv) {
+        if (typeof tsv !== "string") throw new Error("The rapid 19×19 history is unavailable.");
+        const lines = tsv.replace(/^\uFEFF/, "").trim().split(/\r?\n/);
+        const headers = lines.shift().split("\t");
+        const dateIndex = headers.indexOf("ended");
+        const ratingIndex = headers.indexOf("rating");
+        if (dateIndex < 0 || ratingIndex < 0) throw new Error("OGS returned an unexpected rating history.");
+        return lines.filter(line => line.trim()).map(line => {
+            const values = line.split("\t");
+            const seconds = Number(values[dateIndex]);
+            const rating = Number(values[ratingIndex]);
+            const date = new Date(seconds * 1000);
+            if (!values[dateIndex] || !values[ratingIndex] || !Number.isFinite(rating) || !Number.isFinite(date.getTime())) {
+                throw new Error("OGS returned an incomplete rating history.");
+            }
+            return { date: date.toISOString(), rating };
+        }).sort((a, b) => a.date.localeCompare(b.date));
+    }
+
+    // The termination endpoint does not allow cross-origin browser access.
+    // A scheduled public snapshot preserves the exact series and its fetch time.
+    function parseHistorySnapshot(payload) {
+        if (!payload || payload.series !== "live-19x19" || !Array.isArray(payload.history)) {
+            throw new Error("The rapid 19×19 history snapshot is unavailable.");
+        }
+        const updatedAt = new Date(payload.updatedAt);
+        if (!Number.isFinite(updatedAt.getTime())) throw new Error("The rating history freshness is unavailable.");
+        const history = payload.history.map(point => {
+            const date = new Date(point && point.date);
+            if (!point || typeof point.date !== "string" || typeof point.rating !== "number" || !Number.isFinite(point.rating) || !Number.isFinite(date.getTime())) {
+                throw new Error("The rating history snapshot is incomplete.");
+            }
+            return { date: date.toISOString(), rating: point.rating };
+        }).sort((a, b) => a.date.localeCompare(b.date));
+        return { history, historyUpdatedAt: updatedAt.toISOString() };
+    }
+
+    async function request(url, format, fetchImpl, externalSignal) {
+        const controller = new AbortController();
+        const forwardAbort = () => controller.abort();
+        if (externalSignal) {
+            if (externalSignal.aborted) controller.abort();
+            else externalSignal.addEventListener("abort", forwardAbort, { once: true });
+        }
+        const timeout = setTimeout(() => controller.abort(), 12000);
+        try {
+            const response = await fetchImpl(url, {
+                credentials: "omit", mode: "cors", signal: controller.signal,
+                headers: { Accept: format === "json" ? "application/json" : "text/tab-separated-values" },
+            });
+            if (!response.ok) throw new Error(`OGS returned HTTP ${response.status}.`);
+            return await response[format]();
+        } finally {
+            clearTimeout(timeout);
+            if (externalSignal) externalSignal.removeEventListener("abort", forwardAbort);
+        }
+    }
+
+    async function loadProfileData(options = {}) {
+        const fetchImpl = options.fetchImpl || root.fetch.bind(root);
+        const includeHistory = options.includeHistory !== false;
+        const data = { username: null, dan: null, elo: null, games: null, history: null, historyUpdatedAt: null, errors: [] };
+        const tasks = [
+            ["profile", () => request(ENDPOINTS.profile, "json", fetchImpl, options.signal).then(parseProfile)],
+            ["games", () => request(ENDPOINTS.games, "json", fetchImpl, options.signal).then(parseGames)],
+        ];
+        if (includeHistory) tasks.push(["history", () => request(ENDPOINTS.history, "json", fetchImpl, options.signal).then(parseHistorySnapshot)]);
+        const results = await Promise.allSettled(tasks.map(([, run]) => run()));
+        results.forEach((result, index) => {
+            const section = tasks[index][0];
+            if (result.status === "fulfilled") {
+                if (section === "profile" || section === "history") Object.assign(data, result.value);
+                else data[section] = result.value;
+            } else {
+                data.errors.push({ section, message: result.reason instanceof Error ? result.reason.message : "OGS data is unavailable." });
+            }
+        });
+        return data;
+    }
+
+    root.IconoclasteData = Object.freeze({ loadProfileData, rankLabel, parseProfile, parseGames, parseHistory, parseHistorySnapshot, endpoints: ENDPOINTS });
+})(globalThis);
+
+</script><script>
+const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+const themeButton=document.querySelector('.theme');
+themeButton.addEventListener('click',()=>{const light=document.documentElement.classList.toggle('light');themeButton.setAttribute('aria-label',light?'Switch to dark theme':'Switch to light theme');themeButton.setAttribute('aria-pressed',String(light));});
+const system=document.querySelector('.system');system.addEventListener('click',()=>{const expanded=system.getAttribute('aria-expanded')!=='true';system.setAttribute('aria-expanded',String(expanded));system.setAttribute('aria-label',expanded?'Collapse the planet system':'Expand the planet system');document.querySelector('.revelation').setAttribute('aria-hidden',String(!expanded));});
+let seed=2117847;function random(){seed=(seed*1664525+1013904223)>>>0;return seed/4294967296}document.querySelectorAll('.stars').forEach((layer,index)=>{for(let i=0;i<(index?34:65);i++){const s=document.createElement('i');s.className='star';s.style.left=random()*100+'%';s.style.top=random()*100+'%';s.style.animationDelay=-random()*8+'s';layer.append(s);}});
+const mascot=document.querySelector('.mascot'),iris=document.querySelector('.iris');let targetX=0,targetY=0,eyeX=0,eyeY=0,frame=0,lastFrame=0;
+function eyeStep(time){const dt=lastFrame?Math.min(time-lastFrame,50):16;lastFrame=time;const ease=1-Math.exp(-dt/190);eyeX+=(targetX-eyeX)*ease;eyeY+=(targetY-eyeY)*ease;iris.style.setProperty('--ex',eyeX.toFixed(2)+'px');iris.style.setProperty('--ey',eyeY.toFixed(2)+'px');if(Math.abs(eyeX-targetX)+Math.abs(eyeY-targetY)>.025)frame=requestAnimationFrame(eyeStep);else{frame=0;lastFrame=0}}
+function gaze(x,y){targetX=x;targetY=y;if(!frame)frame=requestAnimationFrame(eyeStep)}
+addEventListener('pointermove',e=>{if(reduced.matches||e.pointerType==='touch')return;const r=mascot.getBoundingClientRect();let x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;const len=Math.hypot(x,y);const scale=Math.min(len/130,1);gaze(len?x/len*6*scale:0,len?y/len*5*scale:0);},{passive:true});document.documentElement.addEventListener('pointerleave',()=>gaze(0,0));
+let scrollFrame=0;function parallax(){scrollFrame=0;const y=window.scrollY;if(!reduced.matches){document.querySelector('.depth').style.transform=`translateY(${Math.min(y*.22,150)}px)`;document.querySelector('.sky').style.transform=`translateY(${-y*.075}px)`;document.querySelector('.stars.near').style.transform=`translateY(${-y*.12}px)`;document.querySelector('.content').style.transform=`translateY(${-Math.min(y*.035,35)}px)`;}}addEventListener('scroll',()=>{if(!scrollFrame)scrollFrame=requestAnimationFrame(parallax)},{passive:true});
+function chart(points){const path=document.querySelector('#rating-line');if(!points||points.length<2){path.setAttribute('d','');document.querySelector('#history-error').textContent=points?'Not enough rated games yet.':'Rating history is temporarily unavailable.';return;}const values=points.map(p=>p.rating),low=Math.min(...values),high=Math.max(...values),range=Math.max(high-low,30),dates=points.map(p=>new Date(p.date).getTime()),start=Math.min(...dates),end=Math.max(...dates);const d=points.map((p,i)=>{const x=12+(end>start?(dates[i]-start)/(end-start):i/(points.length-1))*576;const y=130-(p.rating-low)/range*100;return `${i?'L':'M'}${x.toFixed(2)},${y.toFixed(2)}`}).join(' ');path.setAttribute('d',d);document.querySelector('#history-error').textContent='';}
+let loading=false;async function refresh(){if(loading)return;loading=true;try{const data=await IconoclasteData.loadProfileData();if(data.username)document.querySelector('.handle').textContent=data.username;if(data.dan!==null){document.querySelector('#dan').textContent=data.dan;document.querySelector('#elo').textContent=String(data.elo);document.querySelector('#rank-error').textContent='';}else document.querySelector('#rank-error').textContent='Rating temporarily unavailable.';if(data.games){const el=document.querySelector('#games');el.replaceChildren();if(!data.games.length)el.textContent='No games yet.';data.games.forEach((g,i)=>{if(i){const comma=document.createElement('span');comma.className='comma';comma.textContent=', ';el.append(comma)}const a=document.createElement('a');a.textContent=g.name;a.href=g.url;a.target='_top';a.className=g.win?'win':'';a.setAttribute('aria-label',`${g.name} — ${g.annulled?'annulled game':g.win?'win':'loss or draw'}`);a.title=g.annulled?'Annulled':g.win?'Won':'Lost or drawn';el.append(a)});}else document.querySelector('#games').textContent='Game history temporarily unavailable.';chart(data.history);if(data.historyUpdatedAt)document.querySelector('.sparkline title').textContent='Rapid 19×19 rating history · refreshed '+new Date(data.historyUpdatedAt).toLocaleString();}catch(e){document.querySelector('#rank-error').textContent='Profile temporarily unavailable.';document.querySelector('#games').textContent='Unable to load games. Reload to retry.';}finally{loading=false}}refresh();setInterval(()=>{if(!document.hidden)refresh()},300000);
+</script></body></html>
