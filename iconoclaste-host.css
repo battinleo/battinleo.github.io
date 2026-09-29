@@ -31,4 +31,9 @@ body:has(.ico-astral-shell) .NavBar .Menu-children{border:1px solid #3c304d;box-
 body:has(.ico-astral-shell) .NavBar .Menu-children :is(a,button,.MenuLinkTitle,label,h4,h5,i){color:#eee8f7!important}
 body:has(.ico-astral-shell) .NavBar .Menu-children :is(a,button):is(:hover,:focus-visible){background:#352443!important;color:#fff!important}
 body:has(.ico-astral-shell) .NavBar .Menu-children :is(input,select){background:#241b31!important;color:#eee8f7!important;border-color:#59456f!important}
-body:has(.ico-astral-shell) .NavBar .OpenMenuButton{color:#bcb3c9!important}
+body:has(.ico-astral-shell) .NavBar{border-bottom-color:#28212f!important}
+body:has(.ico-astral-shell) .NavBar .Menu:is(:hover,:focus-within,.active){background:#251a32!important}
+body:has(.ico-astral-shell) .NavBar .Menu:is(:hover,:focus-within,.active)>.Menu-title{color:#eee8f7!important}
+body:has(.ico-astral-shell) .NavBar .OpenMenuButton:is(:focus-visible,.active){background:#352443!important;color:#eee8f7!important;outline-color:#ac7de0}
+body:has(.ico-astral-shell) .NavBar .Menu-children .theme-button{background:#30243e!important;border-color:#59456f!important}
+body:has(.ico-astral-shell) .NavBar .Menu-children .theme-button.primary{background:#674195!important;border-color:#b98ae8!important}
