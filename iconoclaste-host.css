@@ -1,0 +1,20 @@
+/* Host the interactive profile while preserving OGS navigation and the owner's edit control. */
+html:has(.ico-astral-shell),body:has(.ico-astral-shell){background:#0b0911!important;color:#eae3f2!important}
+body:has(.ico-astral-shell) .MainSection{padding:0!important;margin:0!important;background:#0b0911!important}
+.User:has(.ico-astral-shell){max-width:none!important;width:100%!important;padding:0!important;margin:0!important}
+.User:has(.ico-astral-shell)>.ratings-row,.User:has(.ico-astral-shell)>.row>.col-sm-4{display:none!important}
+.User:has(.ico-astral-shell)>.row{margin:0!important;display:block!important}
+.User:has(.ico-astral-shell)>.row>.col-sm-8{width:100%!important;padding:0!important}
+.User:has(.ico-astral-shell)>.row>.col-sm-8>:not(.Card:has(.ico-astral-shell)){display:none!important}
+.User:has(.ico-astral-shell) .Card:has(.ico-astral-shell),.User:has(.ico-astral-shell) .about-container,.User:has(.ico-astral-shell) .Markdown{background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important;margin:0!important;max-height:none!important;overflow:visible!important}
+.ico-astral-shell{width:100%;margin:0;line-height:0}
+.ico-astral-shell embed{display:block;border:0;width:100%;height:calc(100dvh - 50px);min-height:520px;background:#0b0911}
+.User:has(.ico-astral-shell)>div:first-child,.User:has(.ico-astral-shell) .profile-card,.User:has(.ico-astral-shell) .avatar-and-ratings-row,.User:has(.ico-astral-shell) .avatar-container{display:contents!important}
+.User:has(.ico-astral-shell) .avatar-container>:not(.avatar-buttons),.User:has(.ico-astral-shell) .ratings-container{display:none!important}
+.User:has(.ico-astral-shell) .avatar-buttons{position:fixed;bottom:10px;right:20px;z-index:40;opacity:.45}
+.User:has(.ico-astral-shell) .avatar-buttons:hover,.User:has(.ico-astral-shell) .avatar-buttons:focus-within{opacity:1}
+.User:has(.ico-astral-shell) .avatar-buttons button{background:#171220!important;color:#b9aac9!important;border:1px solid #342b44!important;border-radius:20px;padding:5px 13px;font-size:11px}
+body:has(.ico-astral-shell) .NavBar{background:#100d17!important;color:#bcb3c9!important;box-shadow:0 1px 0 #28212f!important}
+body:has(.ico-astral-shell) .NavBar .Menu-title,body:has(.ico-astral-shell) .NavBar>.right,body:has(.ico-astral-shell) .NavBar .Player{color:#bcb3c9!important}
+body:has(.ico-astral-shell) .NavBar .Menu-children{background:#181320!important;color:#d3cadf!important}
+@media(max-width:650px){.ico-astral-shell embed{height:calc(100dvh - 48px)}.User:has(.ico-astral-shell) .avatar-buttons{right:12px;bottom:8px}}
